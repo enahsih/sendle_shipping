@@ -1,0 +1,75 @@
+body{
+    overflow-x:hidden;
+}
+.tracker-info{
+    font-size: 1.2em;
+}
+
+.tracker-info .row {
+    border-bottom: 1px solid #f6d9d9;
+    padding: 25px 0px;
+}
+.tracker-info .row:last-child {
+     border-bottom: none;
+}    
+
+h5 {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(65, 48, 48);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.logo {
+    padding: 50px 30px;
+    color: #ffffff;
+    font-size: 1.4em;
+    font-weight: bolder;
+    background-color: rgba(14, 60, 110);
+
+}
+#logo{
+    margin-top: 45px;
+
+}
+
+.shipmenthistory .items{
+    border-bottom: 1px solid black;
+}
+
+.shipmenthistory .items:last-child{
+    border-bottom: none;
+}
+.shipmenthistory .items span{
+    font-weight: bold;
+}   
+
+.headersd{
+    margin-top: 20px;
+}
+
+@media (max-width:568px) {
+    .tracker-info{
+        padding-left: -20px;
+        font-size: 1.5em;
+    }
+
+    #barcode{
+        text-align: center;
+    }
+
+    .logo{
+
+        padding: 50px 20px;
+        font-size: 1.25em;
+    }
+    #logo{
+        margin-top: 4rem;
+        margin-bottom: 2rem;  
+    }
+
+    .shipmenthistory .items{
+        font-size: 0.9em;
+    }
+
+}

@@ -1,0 +1,148 @@
+body {
+  background-color: rgba(245, 245, 245, 0.5);
+  overflow-x: scroll;
+  padding-left: 0px;
+}
+
+
+.dashboard-menu {
+  background-color: rgb(28, 28, 73);
+  height: 100%;
+  margin-left: -90px;
+  padding-top: 20px;
+  color: #ffffff;
+}
+
+.dashboard-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.dashboard-menu a.shipments {
+  color: #ffffff;
+  margin-left: 75px;
+  font-size: 1em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.dashboard-menu .dropdown-menu {
+  background-color: rgb(28, 28, 73);
+}
+
+/*logout icon -----------------------*/
+
+.logout {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+}
+.logout i {
+  border-radius: 50%;
+  padding: 10px;
+  color: rgb(71, 35, 35);
+  border: 1px solid black;
+  cursor: pointer;
+}
+.logout a {
+  background-color: #ffffff;
+  text-decoration: none;
+  margin-top: 20px;
+  display: none;
+}
+.logout a:hover {
+  color: rgba(71, 35, 35, 0.5);
+}
+
+/*media queries for smaller screen*/
+@media (max-width: 765px) {
+  .dashboard-menu h4 {
+    position: relative;
+    left: -50px;
+    top: -5px;
+  }
+  .dashboard-menu a.shipments {
+    margin-left: 120px;
+    margin-top: -100px;
+  }
+  h3 {
+    font-size: 0.9em;
+    margin-top: 20px;
+  }
+  .logout {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    z-index: 1;
+  }
+  .logout i {
+    border-radius: 50%;
+    padding: 10px;
+    color: rgb(71, 35, 35);
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  .logout a {
+    background-color: #ffffff;
+    text-decoration: none;
+    margin-top: 20px;
+    display: none;
+  }
+  .logout a:hover {
+    color: rgba(71, 35, 35, 0.5);
+  }
+  form {
+    padding: 10px;
+    padding-top: 5px;
+  }
+
+  /*second menu-----------*/
+  .menu2 li{
+    margin-left: 100px;
+  }
+}
+
+
+form {
+  padding-top: 20px;
+  background-color: #ffffff;
+}
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+form input {
+  margin-top: 10px;
+}
+form .author input {
+  width: 100%;
+}
+form .shipment-details, form .sh-rec-details {
+  border-top: 1px solid black;
+}
+form .shipment-status {
+  background-color: #ffffff;
+  margin-left: 10px;
+}
+form h5 {
+  color: orange;
+}
+
+
+/*table ---------------*/
+
+table {
+  overflow-x: scroll;
+  width: 300%;
+  font-size: 14px;
+}
+table td {
+  margin-right: 20px;
+}
+table a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px;
+}
+table th {
+  color: #0000ff;
+}/*# sourceMappingURL=index.css.map */

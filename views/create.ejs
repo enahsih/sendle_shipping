@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Shipment</title>
+
+
+    <!--external css files-->
+    <link rel="stylesheet" href="/ejs/index.css">
+
+  
+     <!---Bootstrap stylesheets CDN-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+      <!--fontawesome icons into the project-->
+    <!--Helps you to add cool and awesome icons to your project-->
+    <script src="https://kit.fontawesome.com/ad79b26024.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row gx-4">
+             <!--Dashboard menu-------------------------------------------------->
+            
+            <div class="col-md-2">
+                <div class="col dashboard-menu">
+                    <h4 class="fw-bolder text-center"> <i class="fa fa-tachometer"></i> Dashboard</h4>
+
+                    <a href="#" class="dropdown-toggle shipments" id="dropdownMenuButton1" data-bs-toggle="dropdown">Shipments <i class="fa fa-dropdown"></i></a>
+                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a href="/" class="dropdown-item"> </i> Home</a></li>
+                    <li><a href="/sadmin/list" class="dropdown-item"> All Shipments</a></li>
+                   </ul>
+               </div>
+            </div>
+
+            <div class="col-md-10">
+
+            <h3 class="welcome-message text-align mt-2">Welcome to the admin panel of Sendle logistics.<br> <%=role%> a shipment NOW!</h3>
+            <div class="logout text-center">
+                <span><i class="fa fa-user" id="user-logout"></i></span><br>
+                <span><a href="/sadmin/logout" class="mt-2" id="logout">Log out</a></span>
+            </div>
+            
+                
+            <form action="/sadmin/create" method="post">
+                   
+                    <div class="row gy-5">
+                        <div>
+                            <input type="hidden" name="_id" value="<%=update._id%>">
+                        </div>
+                         <!--Left hand side-->
+                        <div class="col">
+                            <!--Author and admin-->
+                            <div class="author"> <input type="text" placeholder="Enter title here" name="title" value="<%=update.Title%>" required></div>
+                            <div>
+                                <label for="author" class="form-label">Author</label>
+                                <select name="author"  class="form-select" id="author" value="<%=update.author%>">
+                                    <option selected>Sendle Logistics</option>
+                                </select>
+                            </div>
+
+                            <!--shipper and receiver info-->
+                          <div class="row mt-5 sh-rec-details pt-4 gy-4">
+                                <!--Shipper details-->
+                               <div class="col-sm- col-md- col-lg-6">
+                                    <h5>Shipper Details</h5>
+                                    <label for="shipper-name" class="form-label" >Shipper Name</label>
+                                    <input type="text" class="form-control" id="shipper-name" name="shname" value="<%=update.Shipper%>">
+                                    <label for="shipper-phone"  class="form-label">Phone Number</label>
+                                    <input type="number" class="form-control" id="shipper-phone" name="shphone" value="<%=update.Shphone%>">
+                                    <label for="shipper-address"  class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="shipper-address" name="shadd" value="<%=update.shadd%>">
+                                    <label for="shipper-email"  class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="shipper-email" name="shmail" value="<%=update.shmail%>">
+                                </div> 
+
+                                <!--Receiver details-->
+                               <div class="col-sm- col-md- col-lg-6">
+                                    <h5>Receiver Details</h5>
+                                    <label for="rec-name" class="form-label">Receiver Name</label>
+                                    <input type="text" class="form-control" id="rec-name" name="recname" value="<%=update.Rec%>">
+                                    <label for="rec-phone"  class="form-label">Phone Number</label>
+                                    <input type="number" class="form-control" id="rec-phone" name="recphone" value="<%=update.recphone%>">
+                                    <label for="rec-address"  class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="rec-address" name="recadd" value="<%=update.recadd%>">
+                                    <label for="rec-email"  class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="rec-email" name="recmail" value="<%=update.recmail%>">
+                                </div>
+                            </div> 
+
+                            <!--Shipment Details----------------->
+                            <div class="row mt-5 pt-4 shipment-details">
+                                <h5>Shipment Details</h5>
+                                <div class="col-sm- col-md- col-lg-6">
+                                    <label for="agent" class="form-label">Agent Name</label>
+                                    <input type="text" class="form-control" id="agent" name="agent" value="<%=update.Agent_Name%>">
+                                    <label for="tos">Type of shipment</label>
+                                    <input type="text" name="tos" class="form-control" value="<%=update.tos%>">
+
+                                    <label for="courier"  class="form-label">Courier</label>
+                                    <input type="text" class="form-control" id="courier" name="courier" value="<%=update.Courier%>">
+                                    <div>
+                                        <label for="mode">Mode</label>
+                                        <select name="mode" id="mode" class="form-select" value="<%=update.Mode%>">
+                                            <option value="Ground Freight" selected>Ground Freight</option>
+                                            <option value="Air Freight">Air Freight</option>
+                                            <option value="Sea Freight">Sea Freight</option>
+                                        </select>
+                                    </div> 
+
+                                   <label for="quantity" class="form-label">Quantity</label>
+                                    <input type="number" class="form-control" id="quantity" name="quantity" value="<%=update.Quantity%>">
+                                    <label for="totalfreight" class="form-label">Total Freight</label>
+                                    <input type="number" class="form-control" id="totalfreight" name="totalfreight" value="<%=update.Totalfreight%>">
+                                    <label for="reference" class="form-label">Carrier Reference No.</label>
+                                    <input type="text" class="form-control" id="reference" name="CRN" value="<%=update.CRN%>">
+                                    <label for="origin" class="form-label">Origin</label>
+                                    <input type="text" class="form-control" id="origin" name="origin" value="<%=update.Origin%>">
+                                    <label for="pickup-date" class="form-label">Pickup Date</label>
+                                    <input type="date" class="form-control" id="pickup-date" name="POD" value="<%=update.POD%>">
+                                    <label for="expected-date" class="form-label">Expected Delivery Date</label>
+                                    <input type="date" class="form-control" id="expected-date" name="EDD" value="<%=update.EDD%>">
+                                </div> 
+
+                               <div class="col-sm- col-md- col-lg-6">
+                                    <label for="weight" class="form-label">Weight (kg)</label>
+                                    <input type="number" class="form-control" id="weight" name="weight" value="<%=update.Weight%>">
+                                    <label for="packages" class="form-label">Packages</label>
+                                    <input type="text" class="form-control" id="packages" name="packages" value="<%=update.Packages%>">
+                                    <label for="product" class="form-label">Product</label>
+                                    <input type="text" class="form-control" id="product" name="product" value="<%=update.Product%>">
+                                    <div>
+                                        <label for="pmode">Payment Mode</label>
+                                        <select name="paymode" id="pmode" class="form-select" value="<%=update.Payment%>">
+                                            <option value="Bank Transfer">Bank Transfer</option>
+                                            <option value="Paypal" selected>PayPal</option>
+                                            <option value="Bitcoin">Bitcoin</option>
+                                            <option value="Cash">Cash</option>
+                                        </select>
+                                    </div> 
+
+                               <div>
+                                        <label for="carrier">Carrier</label>
+                                        <select name="carrier" id="carrier" class="form-select" value="<%=update.Carrier%>">
+                                            <option value="Name1">Sendle Logistics</option>
+                                        </select>
+                                    </div>
+
+                                    <label for="dep-t" class="form-label">Departure time</label>
+                                    <input type="time" class="form-control" id="dep-t" name="DT" value="<%=update.Departure_time%>">
+                                    <label for="destination" class="form-label">Destination</label>
+                                    <input type="text" class="form-control" id="destination" name="destination" value="<%=update.Destination%>">
+                                    <label for="pickup-t" class="form-label">Pickup time</label>
+                                    <input type="time" class="form-control" id="pickup-t" name="PT" value="<%=update.Pickup_time%>">
+                                </div>
+                            </div>  
+
+                            <!--Textbox -------------------------->
+                           <div class="row">
+                                <label for="comments" class="form-label mt-3">Comments</label>
+                                <textarea name="comments" id="comments" rows="3" class="form-control" value="<%=update.Comments%>"></textarea>
+                             </div> 
+
+                        <!--  <div class="row mt-4">
+                                <h5>Shipment History</h5>
+                                <table class="table">
+                                    <thead>
+                                        <tr class="table-success fw-bold">
+                                            <td>Date</td>
+                                            <td>Time</td>
+                                            <td>Location</td>
+                                            <td>Status</td>
+                                            <td>Updated by</td>
+                                            <td>Remarks</td>
+                                        </tr>
+                                    </thead>                                     
+                                </table>
+                                <p id="table-content"></p>
+                             </div>-->
+
+                        </div> 
+
+                        
+                        <!--Right hand side--> 
+                       <div class="col-md-3 shipment-status">
+                            <h5>Current Status:----</h5>
+                            <input type="date" id="status-date" class="form-control mb-3" name="Status_date" value="<%=update.SDate%>">
+                            <input type="time" id="status-time" class="form-control mb-3" name="Status_time" value="<%=update.STime%>">
+                            <input type="text" id="location" class="form-control mb-3" name="location" value="<%=update.Location%>" placeholder="Location">
+                            <select name="status" id="status" class="form-select mb-3" value="<%=update.Status%>" required>
+                                <option value="In transit">In transit</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="On hold">On hold</option>
+                            </select>
+                            <textarea name="remark" id="remark" cols="30" rows="2" class="form-control mb-3" placeholder="Remarks" value="<%=update.Remarks%>"></textarea>
+                        
+                            <button type="submit" class="btn btn-success"> <%=functionality%> </button>
+                        </div>                
+                    </div>
+                 </form>
+
+            </div>
+        </div> 
+                       
+    </div>
+
+</body>
+
+<!-- JavaScript Bundle with Popper -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    //form input fields on change
+    var inputc = document.getElementsByClassName('form-control');
+    console.log(inputc)
+    console.log(inputc)
+    Array.from(inputc).forEach(element => {
+     element.addEventListener('change', function(){
+         this.style.backgroundColor = '#ebeb36'
+     })
+    });
+
+    //configuring the logout
+    var userLogout = document.getElementById('user-logout')
+    userLogout.addEventListener('mouseover', function(){
+        document.getElementById('logout').style.display ="inline"
+    })
+ </script>
+
+</html>

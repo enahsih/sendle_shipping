@@ -1,0 +1,69 @@
+body {
+  background: url("../img/Containers.jpg");
+  background-size: auto;
+  background-position: top-left;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 500px;
+  position: absolute;
+  margin-left:100px;
+  top: 3rem;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.card1 {
+  width: 100%;
+}
+
+input {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+button {
+  margin: 0 auto;
+}
+
+.fa-user {
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 255, 0.5);
+  padding: 15px;
+  color: rgba(0, 0, 255, 0.5);
+}
+
+@media (max-width: 568px) {
+  .container {
+    width: 340px;
+    margin-left: 28px;
+  }
+}
+  @media (max-width: 375px) {
+    .container {
+      width: 250px;
+      margin-left:15px ;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 500px;
+      margin-left:10em ;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      width: 500px;
+      margin-left:20em ;
+    }
+  }
+
+
+
+ 
+
+  
+  /*# sourceMappingURL=log.css.map */

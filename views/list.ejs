@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Shipments</title>
+
+        <!--external css files-->
+        <link rel="stylesheet" href="/ejs/index.css">
+
+        <!--Bootstrap for all the engines-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+          <!--fontawesome icons into the project-->
+        <!--Helps you to add cool and awesome icons to your project-->
+        <script src="https://kit.fontawesome.com/ad79b26024.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+             <!--Dashboard menu-------------------------------------------------->
+            <div class="col-md-2">
+                <div class="col dashboard-menu menu2">
+                   <h4 class="fw-bolder text-center"> <i class="fa fa-tachometer"></i> Dashboard</h4>
+                   <ul>
+                    <li><a href="/"></i> Home</a></li>
+                    <li><a href="/sadmin/list">All Shipments</a></li>
+                   </ul>
+               </div>
+            </div>
+
+            <div class="col-md-10 mt-3">
+                <!--Create shipment button-->
+                <h2 class="welcome-message text-align mt-2">Welcome, See List of shipments</h2>
+                <a href="/sadmin/create" class="btn btn-success mt-2" type="btn">Create Shipment</a>
+
+                <div class="logout text-center">
+                    <span><i class="fa fa-user" id="user-logout"></i></span><br>
+                    <span><a href="/sadmin/logout" class="mt-2" id="logout">Log out</a></span>
+                </div>
+
+            <div class="container shipment-list">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped table-sm mt-4">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th >Tracking No.</th>
+                                <th>Category</th>
+                                <th>Agent</th>
+                                <th>Shipper N</th>
+                                <th>Rec'ver N</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% let n = 0 %>
+                            <% list.forEach(e =>{ %>
+                               <% let m  = e.SDate%>
+                              <tr>
+                                <td><%=n = n+1%></td>
+                                <td><%=e.Title%></td>
+                                <td><%=e.Type_of_shipment%></td>
+                                <td><%=e.Agent_Name%></td>
+                                <td><%=e.Shipper%></td>
+                                <td><%=e.Rec%></td>
+                                <td><%=m%></td>
+                                <td class="table-active fw-bold"><%=e.Status%></td>
+                                <td><a href="/sadmin/edit/<%=e._id%>" class="bg-success">Update</a></td>
+                                <td><a href="/sadmin/delete/<%=e._id%>" class="bg-danger" onclick="return confirm('Are you sure you want to delete shipment')">Delete</a><td>
+                              </tr>
+                            <% })%>
+                        </tbody>
+                    </table> 
+
+                </div>
+  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+    <script>
+
+         //configuring the logout
+        var userLogout = document.getElementById('user-logout')
+        userLogout.addEventListener('mouseover', function(){
+            document.getElementById('logout').style.display ="inline"
+        })
+    </script>
+    
+</html>
