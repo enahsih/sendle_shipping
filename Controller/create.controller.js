@@ -176,7 +176,7 @@ router.post('/sadmin/create', (req, res) => {
         Departure_time:req.body.DT,
         Destination:req.body.destination,
         Pickup_time:req.body.PT,
-        Comments:req.body.comments,
+        //Comments:req.body.comments,
         SDate:req.body.Status_date,
         STime:req.body.Status_time,
         Location:req.body.location,

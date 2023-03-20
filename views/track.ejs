@@ -36,7 +36,7 @@
                 JsBarcode('#barcode', value, {
                     format:'code128', 
                     displayValue:true,
-                    width:1.5,
+                    width:1.6,
                 })
             }  
         </script>
@@ -232,7 +232,7 @@
                 <div class="row shipmenthistory">
                     <div class="container-fluid gx-5">
                         <h4 class="header">Shipment History</h4>
-                        <table class="table table-hover table-striped table-bordered">
+                        <table class="table  table-bordered">
                             <thead></thead>
                             <tbody>
                                 <tr>
@@ -242,7 +242,7 @@
                                                 <p><span>Date:</span>  <%=e.Date%></p>
                                                 <p><span>Time:</span>  <%=e.Time%></p>
                                                 <p><span>Location:</span>  <%=e.Location%></p>
-                                                <p><span>Status:</span>  <%=e.Status%></p>
+                                                <p><span>Status:</span>  <span style="background-color: yellow;"><%=e.Status%></span></p>
                                                 <p><span>Updated By:</span>  <%=e.Updated_by%></p>
                                                 <p><span>Remarks:</span>  <%=e.Remarks%></p>
     

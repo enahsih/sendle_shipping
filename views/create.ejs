@@ -73,9 +73,9 @@
                                     <label for="shipper-name" class="form-label" >Shipper Name</label>
                                     <input type="text" class="form-control" id="shipper-name" name="shname" value="<%=update.Shipper%>">
                                     <label for="shipper-phone"  class="form-label">Phone Number</label>
-                                    <input type="number" class="form-control" id="shipper-phone" name="shphone" value="<%=update.Shphone%>">
+                                    <input type="number" class="form-control" id="shipper-phone" name="shphone" value="<%=update.ShPhone%>">
                                     <label for="shipper-address"  class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="shipper-address" name="shadd" value="<%=update.shadd%>">
+                                    <input type="text" class="form-control" id="shipper-address" name="shadd" value="<%=update.shAdd%>">
                                     <label for="shipper-email"  class="form-label">Email</label>
                                     <input type="email" class="form-control" id="shipper-email" name="shmail" value="<%=update.shmail%>">
                                 </div> 
@@ -86,9 +86,9 @@
                                     <label for="rec-name" class="form-label">Receiver Name</label>
                                     <input type="text" class="form-control" id="rec-name" name="recname" value="<%=update.Rec%>">
                                     <label for="rec-phone"  class="form-label">Phone Number</label>
-                                    <input type="number" class="form-control" id="rec-phone" name="recphone" value="<%=update.recphone%>">
+                                    <input type="number" class="form-control" id="rec-phone" name="recphone" value="<%=update.recPhone%>">
                                     <label for="rec-address"  class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="rec-address" name="recadd" value="<%=update.recadd%>">
+                                    <input type="text" class="form-control" id="rec-address" name="recadd" value="<%=update.recAdd%>">
                                     <label for="rec-email"  class="form-label">Email</label>
                                     <input type="email" class="form-control" id="rec-email" name="recmail" value="<%=update.recmail%>">
                                 </div>
@@ -101,7 +101,7 @@
                                     <label for="agent" class="form-label">Agent Name</label>
                                     <input type="text" class="form-control" id="agent" name="agent" value="<%=update.Agent_Name%>">
                                     <label for="tos">Type of shipment</label>
-                                    <input type="text" name="tos" class="form-control" value="<%=update.tos%>">
+                                    <input type="text" name="tos" class="form-control" value="<%=update.Type_of_shipment%>">
 
                                     <label for="courier"  class="form-label">Courier</label>
                                     <input type="text" class="form-control" id="courier" name="courier" value="<%=update.Courier%>">
@@ -117,7 +117,7 @@
                                    <label for="quantity" class="form-label">Quantity</label>
                                     <input type="number" class="form-control" id="quantity" name="quantity" value="<%=update.Quantity%>">
                                     <label for="totalfreight" class="form-label">Total Freight</label>
-                                    <input type="number" class="form-control" id="totalfreight" name="totalfreight" value="<%=update.Totalfreight%>">
+                                    <input type="number" class="form-control" id="totalfreight" name="totalfreight" value="<%=update.Total_Freight%>">
                                     <label for="reference" class="form-label">Carrier Reference No.</label>
                                     <input type="text" class="form-control" id="reference" name="CRN" value="<%=update.CRN%>">
                                     <label for="origin" class="form-label">Origin</label>
@@ -190,15 +190,18 @@
                         <!--Right hand side--> 
                        <div class="col-md-3 shipment-status">
                             <h5>Current Status:----</h5>
+                            <label for="status-date" class="form-label">Date</label>
                             <input type="date" id="status-date" class="form-control mb-3" name="Status_date" value="<%=update.SDate%>">
+                            <label for="status-time" class="form-label">Time</label>
                             <input type="time" id="status-time" class="form-control mb-3" name="Status_time" value="<%=update.STime%>">
                             <input type="text" id="location" class="form-control mb-3" name="location" value="<%=update.Location%>" placeholder="Location">
+                            <label for="status" class="form-label">Status</label>
                             <select name="status" id="status" class="form-select mb-3" value="<%=update.Status%>" required>
                                 <option value="In transit">In transit</option>
                                 <option value="Delivered">Delivered</option>
                                 <option value="On hold">On hold</option>
                             </select>
-                            <textarea name="remark" id="remark" cols="30" rows="2" class="form-control mb-3" placeholder="Remarks" value="<%=update.Remarks%>"></textarea>
+                            <input type="text" name="remark" class="form-control mb-3" placeholder="Remarks" value="<%=update.Remarks%>">
                         
                             <button type="submit" class="btn btn-success"> <%=functionality%> </button>
                         </div>                
