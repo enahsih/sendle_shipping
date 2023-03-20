@@ -95,11 +95,20 @@ li{
 
     .vision{
       font-size: 1.3em;
-      margin-bottom: -100px;
+      margin-bottom: -50px;
    }
     .founder, .vision{
       padding: 25px;
     }
+
+    .about-home{
+      margin-bottom: -100px;
+    }
+    .vision .row:last-of-type{
+      border-bottom: none;
+      padding-top: 30px;
+      font-size: 0.9em;
+  }
 
 }
 
