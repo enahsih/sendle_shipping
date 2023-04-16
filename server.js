@@ -27,7 +27,7 @@ const History = require("./Models/historytable.model")
 
 //creation of the port variable and mongoose---------------------------------
 const MONGO_URL = process.env.MONGO_URL|| 'mongodb://127.0.0.1:27017/ShipmentDB'
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 11419;
 
 //express-app variable-------------------------------------
 const app = express();
@@ -156,7 +156,7 @@ app.post('/', (req,res)=>{
 
 //Listening on port 5000----------------------------
 app.listen(PORT, function(){
-    console.log("Listening listening on port 5000...")
+    console.log("Listening listening on port 11419...")
     
 })
 
