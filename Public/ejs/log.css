@@ -8,8 +8,9 @@ body {
 .container {
   width: 500px;
   position: absolute;
+  margin-top: 10px;
+  margin-bottom: 200px;
   margin-left:100px;
-  top: 3rem;
   padding: 20px;
   background-color: #ffffff;
 }
@@ -23,10 +24,6 @@ input {
   margin-bottom: 30px;
 }
 
-button {
-  margin: 0 auto;
-}
-
 .fa-user {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 255, 0.5);
@@ -38,32 +35,47 @@ button {
   .container {
     width: 340px;
     margin-left: 28px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
-  @media (max-width: 375px) {
+
+@media (max-width: 285px) {
+  .container {
+    width: 100px;
+    position: absolute;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+}
+
+  @media (max-width: 380px) {
     .container {
-      width: 250px;
-      margin-left:15px ;
+      width: 300px;
+      position: absolute;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #ffffff;
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 765px) {
     .container {
       width: 500px;
       margin-left:10em ;
+      margin-top: 60px;
     }
   }
 
   @media (min-width: 1280px) {
     .container {
       width: 500px;
-      margin-left:20em ;
+      margin-left:25em ;
     }
   }
 
 
-
- 
 
   
   /*# sourceMappingURL=log.css.map */

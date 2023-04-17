@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SAdminPanel</title>
+    <meta charset="utf-8">
+    <title>SENDLE-LOGISTICS - Fast and reliable shipping Company</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Best Courier Services" name="keywords">
+    <meta content="send faster, cheaper, and with great trust and confidence" name="description">
 
-     <!--Bootstrap for all the engines-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <!--External styleshee-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
      <link rel="stylesheet" href="/ejs/log.css">
 
      <!--fontawesome icons into the project-->
@@ -18,22 +31,90 @@
 
 </head>
 <body>
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-dark">
+            <div class="row py-2 px-lg-5">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center text-white">
+                        <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                        <small class="px-3">|</small>
+                        <small><i class="fa fa-envelope mr-2"></i>sendle@gmail.com</small>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white pl-2" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+    
+    
+        <!-- Navbar Start -->
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+                <a href="/" class="navbar-brand ml-lg-3">
+                    <h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>Sendle</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                    <div class="navbar-nav m-auto py-0">
+                        <a href="/" class="nav-item nav-link">Home</a>
+                        <a href="/about" class="nav-item nav-link">About</a>
+                        <a href="/service" class="nav-item nav-link">Services</a>
+                        <a href="/contact" class="nav-item nav-link">Contact</a>
+                        <a href="/track" class="track-link text-white" >Track Package</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!--login form starts here-->
   
     <div class="container login">
         <h3 class="text-center"><i class="fas fa-user"></i></h3>
-        <h2 class="text-center">Admin</h2>
+        <h2 class="text-center">Akwo Mih</h2>
         <div class="card1">
-            <form action="/sadmin/login" method="post" autocomplete="off">
+            <form action="/sadmin/login" method="post" >
                 <label for="email" class="form-label">Email</label>
                 <input type="email" name="email" placeholder="Enter Email" class="form-control mb-2 mt-1" id="email"> 
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="password" placeholder="password" class="form-control mb-3 mt-1" id="password"> 
-                <button type="submit" class="btn btn-primary" type="button">Login </button>
+                <button type="submit" class="btn btn-success text-align-center" type="btn">Login </button>
             </form>
      </div>
 
 
 </body>
+
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <!--counter-->
+
+ <script src="/counter.js"></script>
+
+
+ <!-- JavaScript Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 <script>
    var inputc = document.getElementsByClassName('form-control');
