@@ -43,12 +43,12 @@ router.use((req, res, next) => {
 
 
 //Hashpassword*******************************************************************************
-bcrypt.genSalt(10, (err, salt) => bcrypt.hash('Sendle1909@', salt, (err, hash)=>{
+bcrypt.genSalt(10, (err, salt) => bcrypt.hash('upscourier125ok, salt, (err, hash)=>{
     if (err) throw error;
     const hashedPassword = hash;
 
     const user = new User();
-    user.Email = 'sendlelogistics@outlook.fr';
+    user.Email = 'akwomih1@gmail.com';
     user.Password = hashedPassword;
     user.save().then();
 }))
