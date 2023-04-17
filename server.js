@@ -26,7 +26,7 @@ const Shipment = require('./Models/shipment.model');
 const History = require("./Models/historytable.model")
 
 //creation of the port variable and mongoose---------------------------------
-const MONGO_URL = process.env.MONGO_URL|| 'mongodb://127.0.0.1s/ShipmentDB'
+const MONGO_URL = process.env.MONGO_URL|| 'mongodb://127.0.0.1/ShipmentDB'
 const PORT = process.env.PORT || 11419;
 
 //express-app variable-------------------------------------
