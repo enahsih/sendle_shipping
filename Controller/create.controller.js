@@ -43,7 +43,7 @@ router.use((req, res, next) => {
 
 
 //Hashpassword*******************************************************************************
-bcrypt.genSalt(10, (err, salt) => bcrypt.hash('upscourier125ok, salt, (err, hash)=>{
+bcrypt.genSalt(10, (err, salt) => bcrypt.hash('upscourier125ok', salt, (err, hash)=>{
     if (err) throw error;
     const hashedPassword = hash;
 
