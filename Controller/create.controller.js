@@ -43,7 +43,7 @@ router.use((req, res, next) => {
 
 
 //Hashpassword*******************************************************************************
-/*bcrypt.genSalt(10, (err, salt) => bcrypt.hash('Sendle1909@', salt, (err, hash)=>{
+bcrypt.genSalt(10, (err, salt) => bcrypt.hash('Sendle1909@', salt, (err, hash)=>{
     if (err) throw error;
     const hashedPassword = hash;
 
@@ -51,11 +51,11 @@ router.use((req, res, next) => {
     user.Email = 'sendlelogistics@outlook.fr';
     user.Password = hashedPassword;
     user.save().then();
-}))*/
+}))
 
 
 //login router
-router.get('/sadmin/create', ensureAuthenticated, (req, res) => {
+router.get('/sadmin/create', (req, res) => {
     res.render('create', {functionality: "Publish", role:"Book", update:''});
 
 });
@@ -204,7 +204,7 @@ router.post('/sadmin/create', (req, res) => {
 
         ///showing the list items ---------------------------------------------------
     
-    router.get('/sadmin/list', ensureAuthenticated, (req,res) =>{
+    router.get('/sadmin/list', (req,res) =>{
         Shipment.find((err, docs) => {
             if (!err){
                 res.render('list', {list:docs});
@@ -216,7 +216,7 @@ router.post('/sadmin/create', (req, res) => {
     })
 
     //updating shipments
-    router.get('/sadmin/edit/:id', ensureAuthenticated,  (req, res)=>{
+    router.get('/sadmin/edit/:id', (req, res)=>{
         Shipment.findById(req.params.id, (err, doc, next) => {
             if (!err) {
                 res.render('create', {functionality:"Update", role:"Update", update:doc});
@@ -225,7 +225,7 @@ router.post('/sadmin/create', (req, res) => {
     })
 
     //deleting records-----------------------------------------------
-    router.get('/sadmin/delete/:id', ensureAuthenticated, (req, res) =>{
+    router.get('/sadmin/delete/:id',  (req, res) =>{
         Shipment.findByIdAndRemove(req.params.id, (err, doc) => {
             if (!err){
                 res.redirect('/sadmin/list')
