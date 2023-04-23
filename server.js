@@ -101,7 +101,8 @@ run();
 
 //setting up the tracking page result----------------------------------------------
 app.post('/track', (req,res)=>{
-    Shipment.find({Title:req.body.trackingCode}, (err, docs) =>{
+    let trCode = req.body.trackingCode;
+    Shipment.find({Title:trCode.trim()}, (err, docs) =>{
         if (!err){
             if(docs.length == 0){
                 res.redirect('/track')
@@ -128,7 +129,8 @@ app.post('/track', (req,res)=>{
 //from the homepage
 
 app.post('/', (req,res)=>{
-    Shipment.find({Title:req.body.trackingCode}, (err, docs) =>{
+    let tCode = req.body.trackingCode
+    Shipment.find({Title:tCode.trim()}, (err, docs) =>{
         if (!err){
             if(docs.length == 0){
                 res.redirect('/')

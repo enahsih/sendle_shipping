@@ -17,9 +17,7 @@ const  ShipmentSchema = new mongoose.Schema({
     recmail:String,
     
     Agent_Name:String,
-    Type_of_shipment:{
-        type:String,
-    },
+    Type_of_shipment:String,
     Courier:String,
     Mode:String,
     Quantity:Number,
@@ -40,9 +38,7 @@ const  ShipmentSchema = new mongoose.Schema({
 
     SDate:String,
     STime:String,
-    Status:{
-        type:String,
-    },
+    Status:String,
     Location:String,
     Remarks:String
 });
