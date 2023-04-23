@@ -159,7 +159,7 @@ router.post('/sadmin/create', (req, res) => {
         recAdd:req.body.recadd,
         recmail:req.body.recmail,
         Agent_Name:req.body.agent,
-        //Type_of_shipment:req.body.tos,
+        Type_of_shipment:req.body.tos,
         Courier:req.body.courier,
         //Mode:req.body.mode,
         Quantity:req.body.quantity,
